@@ -1,0 +1,55 @@
+.page-home {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 30px 0;
+
+    h1 {
+      color: #5a5959;
+      padding: 0 30px 0 0;
+    }
+
+    input[type="text"] {
+      background: #fff;
+      border: none;
+      border-radius: 6px;
+      color: #a9a9a9;
+      font-size: 16px;
+      padding: 8px 15px;
+    }
+  }
+
+  nav {
+    padding-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding-top: 30px;
+
+    .list-card {
+      background: #fff;
+      border: 1px solid #afafaf;
+      border-radius: 5px;
+      box-shadow: 0px 1px 2px rgb(172, 172, 172);
+
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      margin-bottom: 20px;
+      padding: 20px 10px;
+    }
+    .list-card span {
+      padding: 20px;
+    }
+    .list-card span strong {
+      padding-right: 10px;
+    }
+    .list-card span .squareIcon {
+      border-radius: 4px;
+      height: 50px;
+      width: 50px;
+      margin-top: 5px;
+    }
+  }
+}
