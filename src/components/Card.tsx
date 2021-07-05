@@ -1,48 +1,47 @@
-import React from "react";
-import { SquareIcon } from "./SquareIcon";
+import React from "react"
+import { Link } from "react-router-dom"
+import { strings } from "../ts/constants"
+import { Theme } from "../ts/interfaces"
+import { Button } from "./Button"
+import { SquareIcon } from "./SquareIcon"
 
 interface CardProps {
-  id: string;
-  themeName: string;
-  backgroundColor: string;
-  primaryTextColor: string;
-  secondaryTextColor: string;
-  accentColor: string;
+  theme: Theme
 }
 
 export function Card({
-  id,
-  themeName,
-  backgroundColor,
-  primaryTextColor,
-  secondaryTextColor,
-  accentColor
+  theme
 }: CardProps) {
   return (
-    <li className='list-card' key={id}>
-      <span><strong>Theme name:</strong> {themeName}</span>
+    <li key={theme.id} className='list-card'>
+      <span><strong>{strings.THEME_NAME} {theme.id}:</strong> {theme.themeName}</span>
       <span>
-        <strong>Background color:</strong>
-        <SquareIcon squareColor={backgroundColor}></SquareIcon> {backgroundColor}
+        <strong>{strings.BACKGROUND_COLOR}:</strong>
+        <SquareIcon squareColor={theme.backgroundColor}></SquareIcon> {theme.backgroundColor}
       </span>
       <span>
-        <strong>Primary text color:</strong>
-        <SquareIcon squareColor={primaryTextColor}></SquareIcon> {primaryTextColor}
+        <strong>{strings.PRIMARY_TEXT_COLOR}:</strong>
+        <SquareIcon squareColor={theme.primaryTextColor}></SquareIcon> {theme.primaryTextColor}
       </span>
       <span>
-        <strong>Secondary text color:</strong>
-        <SquareIcon squareColor={secondaryTextColor}></SquareIcon> {secondaryTextColor}
+        <strong>{strings.SECONDARY_TEXT_COLOR}:</strong>
+        <SquareIcon squareColor={theme.secondaryTextColor}></SquareIcon> {theme.secondaryTextColor}
       </span>
       <span>
-        <strong>Accent color:</strong>
-        <SquareIcon squareColor={accentColor}></SquareIcon> {accentColor}
+        <strong>{strings.ACCENT_COLOR}:</strong>
+        <SquareIcon squareColor={theme.accentColor}></SquareIcon> {theme.accentColor}
       </span>
-      <div className="thumbnailPreview" style={{ background: backgroundColor, borderColor: accentColor }}>
-        <span>Theme name: {themeName}</span>
-        <p color={primaryTextColor}>Primary: Lorem ipsum sit dolor amet.</p>
-        <p color={secondaryTextColor}>Secondary: Lorem ipsum sit dolor amet.</p>
+      <div className="thumbnailPreview" style={{ background: theme.backgroundColor, borderColor: theme.accentColor }}>
+        <p>{strings.THEME_NAME}: {theme.themeName}<br /><br /></p>
+        <p style={{ color: theme.primaryTextColor }}>{strings.PRIMARY_TEXT_COLOR}</p>
+        <p style={{ color: theme.secondaryTextColor }}>{strings.SECONDARY_TEXT_COLOR}</p>
+        <p style={{ color: theme.accentColor }} > {strings.ACCENT_COLOR}</p>
       </div>
-      <div className="remove-icon">X</div>
-    </li>
+      <div>
+        <div><Button>{strings.SELECT}</Button></div>
+        <Link to={`/edit-theme?id=${theme.id}`}><Button>{strings.EDIT}</Button></Link>
+        <div><Button>{strings.REMOVE}</Button></div>
+      </div>
+    </li >
   )
 }

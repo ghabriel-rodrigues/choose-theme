@@ -1,21 +1,21 @@
 .page-home {
   header {
-    display: flex;
+    display        : flex;
     justify-content: space-between;
-    padding: 40px 0 30px 0;
+    padding        : 40px 0 30px 0;
 
     h1 {
-      color: #5a5959;
+      color  : #5a5959;
       padding: 0 30px 0 0;
     }
 
     input[type="text"] {
-      background: #fff;
-      border: none;
+      background   : #fff;
+      border       : none;
       border-radius: 6px;
-      color: #a9a9a9;
-      font-size: 16px;
-      padding: 8px 15px;
+      color        : #a9a9a9;
+      font-size    : 16px;
+      padding      : 8px 15px;
     }
   }
 
@@ -24,32 +24,66 @@
   }
 
   ul {
-    list-style: none;
+    list-style : none;
     padding-top: 30px;
 
     .list-card {
-      background: #fff;
-      border: 1px solid #afafaf;
+      background   : #fff;
+      border       : 1px solid #afafaf;
       border-radius: 5px;
-      box-shadow: 0px 1px 2px rgb(172, 172, 172);
+      box-shadow   : 0px 1px 2px rgb(172, 172, 172);
 
-      display: flex;
+      display        : flex;
       justify-content: space-between;
-      list-style: none;
-      margin-bottom: 20px;
-      padding: 20px 10px;
+      list-style     : none;
+      margin-bottom  : 20px;
+      padding        : 20px 10px;
     }
+
     .list-card span {
-      padding: 20px;
+      padding: 10px;
     }
+
     .list-card span strong {
       padding-right: 10px;
     }
+
     .list-card span .squareIcon {
       border-radius: 4px;
-      height: 50px;
-      width: 50px;
-      margin-top: 5px;
+      border       : 1px solid #666;
+      height       : 50px;
+      width        : 50px;
+      margin-top   : 5px;
+    }
+
+    .list-card .thumbnailPreview {
+      margin-right: 10px;
+      padding     : 20px;
+    }
+
+    .list-card .thumbnailPreview span {
+      padding: 0;
+    }
+
+    .list-card button {
+      min-width    : 100%;
+      margin-bottom: 10px;
     }
   }
+
+  button {
+    background   : rgb(200, 222, 247);
+    border       : 1px solid #afafaf;
+    border-radius: 5px;
+    box-shadow   : 0px 1px 2px rgb(172, 172, 172);
+    color        : #616060;
+    font-size    : 16px;
+    padding      : 5px 10px;
+
+    &:hover {
+      cursor    : pointer;
+      box-shadow: 0px 5px 20px rgb(172, 172, 172);
+    }
+  }
+
 }

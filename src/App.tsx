@@ -1,12 +1,12 @@
-import React from 'react';
-import { Home } from './pages/Home';
+import React from 'react'
+import AppRouter from './routes/PublicRouter'
 
 function App() {
   return (
-    <div className="App">
-      <Home></Home>
+    <div className="App" id="App">
+      <AppRouter></AppRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

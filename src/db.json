@@ -1,0 +1,50 @@
+{
+  "themes": [
+    {
+      "id": 1,
+      "themeName": "Ausar",
+      "backgroundColor": "#faec71",
+      "primaryTextColor": "#b97002",
+      "secondaryTextColor": "#999999",
+      "accentColor": "#000000"
+    },
+    {
+      "id": 2,
+      "themeName": "Maat",
+      "backgroundColor": "#999999",
+      "primaryTextColor": "#FFFFFF",
+      "secondaryTextColor": "#afafaf",
+      "accentColor": "#333333"
+    },
+    {
+      "id": 3,
+      "themeName": "Heru",
+      "backgroundColor": "#db4242",
+      "primaryTextColor": "#FFFFFF",
+      "secondaryTextColor": "#afafaf",
+      "accentColor": "#999999"
+    },
+    {
+      "id": 4,
+      "themeName": "Auset",
+      "backgroundColor": "#b97002",
+      "primaryTextColor": "#FFFFFF",
+      "secondaryTextColor": "#180000",
+      "accentColor": "#180000"
+    },
+    {
+      "id": 5,
+      "themeName": "Amem",
+      "backgroundColor": "#f2f8fd",
+      "primaryTextColor": "#5a5959",
+      "secondaryTextColor": "#afafaf",
+      "accentColor": "#000000"
+    }
+  ],
+  "profiles": [
+    {
+      "userGUID": "5b9944fa-8696-448f-a7d9-1e1dd1bc960a",
+      "selectedThemeId": 1
+    }
+  ]
+}
